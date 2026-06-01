@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Personal Portfolio Website">
+<meta name="description" content="Responsive Portfolio Website">
 <title>My Portfolio</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -11,64 +11,92 @@
 <body>
 
 <header>
-<h1>My Portfolio</h1>
-<nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
+    <h1>My Portfolio</h1>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button id="theme-btn">Dark / Light Mode</button>
 </header>
 
 <main>
 
 <section id="about">
-<h2>About Me</h2>
-<p>Hello, I am a student interested in web development and programming.</p>
+    <h2>About Me</h2>
+    <p>
+        Hello! I am a student interested in Web Development,
+        Programming and Technology.
+    </p>
 </section>
 
 <section id="skills">
-<h2>Skills</h2>
-<ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-</ul>
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+        <div class="card">HTML5</div>
+        <div class="card">CSS3</div>
+        <div class="card">JavaScript</div>
+        <div class="card">GitHub</div>
+    </div>
 </section>
 
 <section id="projects">
-<h2>Projects</h2>
+    <h2>Projects</h2>
 
-<article>
-<h3>Portfolio Website</h3>
-<p>A personal portfolio website built using HTML and CSS.</p>
-</article>
+    <div class="projects-grid">
 
+        <article class="card">
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio created using HTML and CSS.</p>
+        </article>
+
+        <article class="card">
+            <h3>Student Management System</h3>
+            <p>Simple student management project.</p>
+        </article>
+
+        <article class="card">
+            <h3>Weather App</h3>
+            <p>Responsive weather information website.</p>
+        </article>
+
+    </div>
 </section>
 
 <section id="contact">
-<h2>Contact Me</h2>
+    <h2>Contact Me</h2>
 
-<form>
-<label>Name</label>
-<input type="text" aria-label="Name" required>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" aria-label="Name" required>
 
-<label>Email</label>
-<input type="email" aria-label="Email" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" aria-label="Email" required>
 
-<label>Message</label>
-<textarea aria-label="Message"></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" aria-label="Message"></textarea>
 
-<button type="submit">Send</button>
-</form>
-
+        <button type="submit">Send</button>
+    </form>
 </section>
 
 </main>
 
 <footer>
-<p>© 2026 My Portfolio</p>
+    <p>© 2026 My Portfolio</p>
 </footer>
+
+<script>
+const themeBtn = document.getElementById("theme-btn");
+
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+});
+</script>
 
 </body>
 </html>
