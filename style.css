@@ -1,49 +1,115 @@
+:root{
+    --bg-color:#ffffff;
+    --text-color:#000000;
+    --card-color:#f2f2f2;
+    --header-color:#007bff;
+}
+
 body{
-font-family: Arial, sans-serif;
-margin:0;
-padding:0;
-line-height:1.6;
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:var(--bg-color);
+    color:var(--text-color);
+    transition:0.3s;
+}
+
+.dark{
+    --bg-color:#222;
+    --text-color:#ffffff;
+    --card-color:#333;
+    --header-color:#111;
 }
 
 header{
-background:#007bff;
-color:white;
-padding:20px;
-text-align:center;
+    background:var(--header-color);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin:15px 0;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-margin:10px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+#theme-btn{
+    padding:10px 15px;
+    border:none;
+    cursor:pointer;
 }
 
 section{
-padding:20px;
+    padding:30px;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:15px;
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:var(--card-color);
+    padding:20px;
+    border-radius:10px;
 }
 
 form{
-display:flex;
-flex-direction:column;
-max-width:400px;
+    display:flex;
+    flex-direction:column;
+    max-width:500px;
 }
 
-input, textarea{
-margin-bottom:10px;
-padding:10px;
+input,
+textarea{
+    margin-bottom:15px;
+    padding:10px;
 }
 
-button{
-background:#007bff;
-color:white;
-border:none;
-padding:10px;
-cursor:pointer;
+form button{
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:10px;
+    cursor:pointer;
 }
 
 footer{
-background:#333;
-color:white;
-text-align:center;
-padding:15px;
+    text-align:center;
+    padding:20px;
+    background:#333;
+    color:white;
+}
+
+/* Responsive Design */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    h1{
+        font-size:24px;
+    }
+
+    section{
+        padding:15px;
+    }
 }
